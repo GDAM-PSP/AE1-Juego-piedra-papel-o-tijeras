@@ -1,0 +1,149 @@
+body{
+    background-color: rgb(125, 0, 125);
+}
+h1{
+    color:white;
+}
+h2{
+    color: white;
+}
+.alineado{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.alineado input{
+    height: 14px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.392);
+}
+.usuario{
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+}
+.maquina{
+    justify-content: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 0px;
+}
+.usuario img{
+    width: 100px;
+    padding-top: 30px;
+}
+.maquina img{
+    width: 100px;
+    padding-top: 30px;
+}
+.eleccionusuario{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.versus{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.eleccionmaquina{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.centro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.apuesta{
+    display: flex;
+}
+.versus img{
+    width: 200px;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#piedra_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+#papel_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+#lagarto_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+#spock_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+#tijeras_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+/* Para la maquina definimos imágenes*/
+#piedra_maquina{
+    width: 200px;
+    border-radius: 200px;
+}
+#papel_maquina{
+    width: 200px;
+    border-radius: 200px;
+}
+#lagarto_maquina{
+    width: 200px;
+    border-radius: 200px;
+}
+#spock_maquina{
+    width: 200px;
+    border-radius: 200px;
+}
+#tijeras_maquina{
+    width: 200px;
+    border-radius: 200px;
+}
+#empezando{
+    color: white;
+    display: none;
+}
+#fight{
+    color: red;
+    display: none; 
+    cursor: pointer;
+}
+#fight:hover{
+    color: white;
+}
+#ganar{
+    color: white;
+    display: none;
+}
+#perder{
+    color: white;
+    display: none;
+}
+#empate{
+    color: white;
+    display: none;
+}
