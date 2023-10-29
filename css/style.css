@@ -16,21 +16,6 @@ button {
 	cursor: pointer;
 }
 
-button:hover {
-	animation: animate 0.3s linear;
-}
-
-@keyframes animate {
-	0% {
-		width: 0px;
-		height: 0px;
-	}
-	100% {
-		width: 100px;
-		height: 30px;
-	}
-}
-
 h1 {
 	color: white;
 }
@@ -75,7 +60,8 @@ h2 {
 }
 
 .marcador {
-    
+    display: none;
+    color: white;
 }
 
 .eleccionusuario {

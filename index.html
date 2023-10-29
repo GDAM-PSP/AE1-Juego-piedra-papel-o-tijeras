@@ -13,8 +13,8 @@
     -->
     <div class="alineado">
     <h1>Introduce tu nombre:</h1>
-    <input type="text" id="nombre">
-    <button id="botonCapturar" onclick="empezarJuego()">Submit</button>
+    <input type="text" id="nombre" autofocus>
+    <button id="botonCapturar" onclick="empezarJuego()" onmouseover="pasarMouseIn(this)" onmouseout="pasarMouseOut(this)">Submit</button>
     </div>
     <!-- 
         FIN 1div
@@ -27,15 +27,15 @@
     <div class="content" id="content">
     <div class="usuario">
         <h2 id="ponerNombre">Usuario:</h2>
-        <div id="cliente1" onclick="clickimg(this)" onmouseover="pasarMouseimgIn(this)" onmouseout="pasarMouseimgOut(this)"><img src="img/piedra.png" alt="piedra" class="imagen"></div>
-        <div id="cliente2" onclick="clickimg(this)" onmouseover="pasarMouseimgIn(this)" onmouseout="pasarMouseimgOut(this)"><img src="img/papel.png" alt="papel" class="imagen"></div>
-        <div id="cliente3" onclick="clickimg(this)" onmouseover="pasarMouseimgIn(this)" onmouseout="pasarMouseimgOut(this)"><img src="img/tijeras.png" alt="tijeras" class="imagen"></div>
-        <div id="cliente4" onclick="clickimg(this)" onmouseover="pasarMouseimgIn(this)" onmouseout="pasarMouseimgOut(this)"><img src="img/lagarto.png" alt="lagarto" class="imagen"></div>
-        <div id="cliente5" onclick="clickimg(this)" onmouseover="pasarMouseimgIn(this)" onmouseout="pasarMouseimgOut(this)"><img src="img/spock.png" alt="spock" class="imagen"></div>
+        <div id="cliente1" onclick="clickimg(this)" onmouseover="pasarMouseIn(this)" onmouseout="pasarMouseOut(this)"><img src="img/piedra.png" alt="piedra" class="imagen"></div>
+        <div id="cliente2" onclick="clickimg(this)" onmouseover="pasarMouseIn(this)" onmouseout="pasarMouseOut(this)"><img src="img/papel.png" alt="papel" class="imagen"></div>
+        <div id="cliente3" onclick="clickimg(this)" onmouseover="pasarMouseIn(this)" onmouseout="pasarMouseOut(this)"><img src="img/tijeras.png" alt="tijeras" class="imagen"></div>
+        <div id="cliente4" onclick="clickimg(this)" onmouseover="pasarMouseIn(this)" onmouseout="pasarMouseOut(this)"><img src="img/lagarto.png" alt="lagarto" class="imagen"></div>
+        <div id="cliente5" onclick="clickimg(this)" onmouseover="pasarMouseIn(this)" onmouseout="pasarMouseOut(this)"><img src="img/spock.png" alt="spock" class="imagen"></div>
     </div>
     <div class="centro">
         <h1 class="marcador" id="marcador">
-            <h4><span id="puntuacion_jugador"></span> - <span id="puntuacion_maquina"></span></h4>
+            <span id="puntuacion_jugador"></span> - <span id="puntuacion_maquina"></span>
         </h1>
         <div class="apuesta">
             <div class="eleccionusuario">

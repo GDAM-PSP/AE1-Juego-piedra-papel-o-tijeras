@@ -71,101 +71,82 @@ lagarto_maquina.style.display = "none";
 const spock_maquina = document.getElementById("spock_maquina");
 spock_maquina.style.display = "none";
 
-//variable que hace que se ejecute la segunda vez una parte del código
 let codigoEjecutado = false;
 
-let cont_puntuacion_jugador = 0;
-let cont_puntuacion_ordenador = 0;
+let marcador = document.getElementById("marcador");
+let cont_puntuacion_jugador;
+let cont_puntuacion_maquina;
 
 //Si no se le da al boton submit no se empieza
 function empezarJuego() {
-	if (!codigoEjecutado) {
-		codigoEjecutado = true;
+	codigoEjecutado = true;
 
-		//Desocultamos el mensaje "empezando"
-		empezando.style.display = "inline";
+	//Desocultamos el mensaje "empezando"
+	empezando.style.display = "block";
 
-		//Ocultamos el mensaje "fight" por si volvemos a poner el nombre que no se sobreescriban los mensajes
-		fight.style.display = "none";
+	//Ocultamos el mensaje "fight" por si volvemos a poner el nombre que no se sobreescriban los mensajes
+	fight.style.display = "none";
 
-		//Ocultamos las imagenes del usuario
-		piedra_usuario.style.display = "none";
-		papel_usuario.style.display = "none";
-		tijeras_usuario.style.display = "none";
-		lagarto_usuario.style.display = "none";
-		spock_usuario.style.display = "none";
+	//Ocultamos las imagenes del usuario
+	piedra_usuario.style.display = "none";
+	papel_usuario.style.display = "none";
+	tijeras_usuario.style.display = "none";
+	lagarto_usuario.style.display = "none";
+	spock_usuario.style.display = "none";
 
-		//Ocultamos las imagenes de la máquina
-		piedra_maquina.style.display = "none";
-		papel_maquina.style.display = "none";
-		tijeras_maquina.style.display = "none";
-		lagarto_maquina.style.display = "none";
-		spock_maquina.style.display = "none";
+	//Reseteamos el marcador
+	marcador.style.setProperty("display", "block");
+	cont_puntuacion_jugador = 0;
+	cont_puntuacion_maquina = 0;
+	puntuacion_jugador.textContent = cont_puntuacion_jugador;
+	puntuacion_maquina.textContent = cont_puntuacion_maquina;
 
-		//cambiamos las elecciones de la maquina a ninguna
-		maquina1.style.backgroundColor = "";
-		maquina2.style.backgroundColor = "";
-		maquina3.style.backgroundColor = "";
-		maquina4.style.backgroundColor = "";
-		maquina5.style.backgroundColor = "";
+	//Ocultamos las imagenes de la máquina
+	piedra_maquina.style.display = "none";
+	papel_maquina.style.display = "none";
+	tijeras_maquina.style.display = "none";
+	lagarto_maquina.style.display = "none";
+	spock_maquina.style.display = "none";
 
-		// Capturamos el valor del input
-		const valorNombre = inputNombre.value;
+	//cambiamos las elecciones de la maquina a ninguna
+	cliente1.style.backgroundColor = "";
+	cliente2.style.backgroundColor = "";
+	cliente3.style.backgroundColor = "";
+	cliente4.style.backgroundColor = "";
+	cliente5.style.backgroundColor = "";
 
-		// Creamos un nuevo nodo de texto
-		ponerNombre.textContent = "Usuario: ";
-		const texto = document.createTextNode(valorNombre);
-		ponerNombre.appendChild(texto);
+	//cambiamos las elecciones de la maquina a ninguna
+	maquina1.style.backgroundColor = "";
+	maquina2.style.backgroundColor = "";
+	maquina3.style.backgroundColor = "";
+	maquina4.style.backgroundColor = "";
+	maquina5.style.backgroundColor = "";
 
-		//"Vaciamos" el nombre del input
-		document.getElementById("nombre").value = "";
+	// Capturamos el valor del input
+	const valorNombre = inputNombre.value;
 
-		//Mostramos el logo del versus
-		vs.style.display = "block";
-		//Una vez ejecutado el código si queremos poner los valores a 0 le damos al botón submit
-	} else {
-		//Desocultamos el mensaje "empezando" y lo ponemos 'inline'
-		empezando.style.display = "inline";
-		//Ocultamos el mensaje fight por si volvemos a poner el nombre que no se sobreescriban los mensajes
-		fight.style.display = "none";
-		//ocultamos los demas mensajes
+	// Creamos un nuevo nodo de texto
+	ponerNombre.textContent = "Usuario: ";
+	const texto = document.createTextNode(valorNombre);
+	ponerNombre.appendChild(texto);
 
-		//Desocultamos las imagenes del usuario
-		piedra_usuario.style.display = "none";
-		papel_usuario.style.display = "none";
-		tijeras_usuario.style.display = "none";
-		lagarto_usuario.style.display = "none";
-		spock_usuario.style.display = "none";
-		//Desocultamos las imagenes de la máquina
-		piedra_maquina.style.display = "none";
-		papel_maquina.style.display = "none";
-		tijeras_maquina.style.display = "none";
-		lagarto_maquina.style.display = "none";
-		spock_maquina.style.display = "none";
-		//cambiamos las elecciones de la maquina a ninguna
-		maquina1.style.backgroundColor = "";
-		maquina2.style.backgroundColor = "";
-		maquina3.style.backgroundColor = "";
-		maquina4.style.backgroundColor = "";
-		maquina5.style.backgroundColor = "";
+	//"Vaciamos" el nombre del input
+	document.getElementById("nombre").value = "";
 
-		// Capturamos el valor del input
-		const valorNombre = inputNombre.value;
+	//Mostramos el logo del versus
+	vs.style.display = "block";
 
-		// Creamos un nuevo nodo de texto
-		ponerNombre.textContent = "Usuario: ";
-		const texto = document.createTextNode(valorNombre);
-		ponerNombre.appendChild(texto);
-		//el nombre lo cambiamos a '' el del input
-		document.getElementById("nombre").value = "";
-		//Mostramos el logo VS
-		vs.style.display = "block";
+	let elementos_partida = document.getElementsByClassName("ganar")[0].children;
+	for (let index = 0; index < elementos_partida.length; index++) {
+		let element = elementos_partida[index];
 
-		//Empezamos de 0
-		cont_puntuacion_jugador = 0;
-		cont_puntuacion_ordenador = 0;
-		codigoEjecutado = false;
+		element.style.display = "none";
 	}
+	debugger;
+	document.getElementById("empezando").style.display = "block";
+
+	//Hacemos escroll hasta el fin de pagina para que el usuario vea todas las opciones
+	window.scrollTo(0, document.body.scrollHeight);
 }
 
 /**
@@ -193,6 +174,12 @@ function clickimg(element) {
 		perder.style.display = "none";
 		empate.style.display = "none";
 		empezando.style.display = "none";
+		//cambiamos el color de fondo de selecciones anteriores
+		cliente1.style.setProperty("background-color", "white");
+		cliente2.style.setProperty("background-color", "white");
+		cliente3.style.setProperty("background-color", "white");
+		cliente4.style.setProperty("background-color", "white");
+		cliente5.style.setProperty("background-color", "white");
 		//ocultamos las respuestas anteriores de la máquina
 		piedra_maquina.style.display = "none";
 		papel_maquina.style.display = "none";
@@ -204,25 +191,30 @@ function clickimg(element) {
 		//Desocultamos la imagen piedra del usuario
 		if (element.children[0].getAttribute("alt") === "piedra") {
 			piedra_usuario.style.display = "";
+			cliente1.style.backgroundColor = "greenyellow";
 		}
 		//Desocultamos la imagen papel del usuario
 		if (element.children[0].getAttribute("alt") === "papel") {
 			papel_usuario.style.display = "";
+			cliente2.style.backgroundColor = "greenyellow";
 		}
 		//Desocultamos la imagen tijeras del usuario
 		if (element.children[0].getAttribute("alt") === "tijeras") {
 			tijeras_usuario.style.display = "";
+			cliente3.style.backgroundColor = "greenyellow";
 		}
 		//Desocultamos la imagen lagarto del usuario
 		if (element.children[0].getAttribute("alt") === "lagarto") {
 			lagarto_usuario.style.display = "";
+			cliente4.style.backgroundColor = "greenyellow";
 		}
 		//Desocultamos la imagen spock del usuario
 		if (element.children[0].getAttribute("alt") === "spock") {
 			spock_usuario.style.display = "";
+			cliente5.style.backgroundColor = "greenyellow";
 		}
 		//Hacemos que aparezca el mensaje "fight"
-		fight.style.display = "inline";
+		fight.style.display = "block";
 	}
 }
 
@@ -230,24 +222,20 @@ function clickimg(element) {
  * Funcion que se aplicara al pasar el mouse por las imagenes del usuario
  * @param {*} element Elemento que ejecuta la accion desde el HTML (this)
  */
-function pasarMouseimgIn(element) {
-	if (codigoEjecutado) {
+function pasarMouseIn(element) {
 		//aumenta la escala a 1.2
-		element.style.transform = "scale(1.2)";
+		element.style.transform = "scale(1.15)";
 		//Esto lo que hace es que le mete al css el pointer que es que parezca que sea un boton donde se pueda clicar
 		element.style.cursor = "pointer";
-	}
 }
 
 /**
  * Funcion que se aplicara al sacar el mouse de las imagenes del usuario
  * @param {*} element Elemento que ejecuta la accion desde el HTML (this)
  */
-function pasarMouseimgOut(element) {
-	if (codigoEjecutado) {
+function pasarMouseOut(element) {
 		//vuelve a la escala a 1
 		element.style.transform = "scale(1)";
-	}
 }
 
 /**
@@ -293,7 +281,7 @@ function maquinaElige() {
 		} else {
 			usuario = "spock";
 		}
-		debugger;
+
 		switch (opcion[numeroAzar]) {
 			case "piedra":
 				piedra_maquina.style.display = "";
@@ -363,12 +351,20 @@ function mostrarResultado(resultado) {
 	switch (resultado) {
 		case "ganar":
 			ganar.style.display = "block";
+			cont_puntuacion_jugador++;
+			puntuacion_jugador.textContent = cont_puntuacion_jugador;
+			puntuacion_maquina.textContent = cont_puntuacion_maquina;
 			break;
 		case "perder":
 			perder.style.display = "block";
+			cont_puntuacion_maquina++;
+			puntuacion_jugador.textContent = cont_puntuacion_jugador;
+			puntuacion_maquina.textContent = cont_puntuacion_maquina;
 			break;
 		default:
 			empate.style.display = "block";
+			puntuacion_jugador.textContent = cont_puntuacion_jugador;
+			puntuacion_maquina.textContent = cont_puntuacion_maquina;
 			break;
 	}
 }
