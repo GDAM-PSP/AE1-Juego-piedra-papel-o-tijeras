@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel, tijeras...</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+    
+</head>
+<body>
+    <!-- 
+        Aqui empezamos el primer div
+        introduces el Nombre y tienes el submit para inicializar el juego
+    -->
+    <div class="alineado">
+    <h1>Introduce tu nombre:</h1>
+    <input type="text" id="nombre">
+    <button id="botonCapturar">Submit</button>
+    </div>
+    <!-- 
+        FIN 1div
+
+        Aqui empezamos el segundo div
+        aqui van las imagenes he dejado las del usuario las de la maquina y las otras son
+        para cuando le das hacer el "show" y el "hide"
+    -->
+    <hr>
+    <div class="content" id="content">
+    <div class="usuario">
+        <h2 id="ponerNombre">Usuario:</h2>
+        <div id="cliente1"><img src="img/piedra.png" alt="piedra"></div>
+        <div id="cliente2"><img src="img/papel.jpg" alt="papel"></div>
+        <div id="cliente3"><img src="img/tijeras.png" alt="tijeras"></div>
+        <div id="cliente4"><img src="img/lagarto.jpg" alt="lagarto"></div>
+        <div id="cliente5"><img src="img/spock.png" alt="spock"></div>
+    </div>
+    <div class="centro">
+        <h1 class="marcador" id="marcador"></h1>
+        <div class="apuesta">
+            <div class="eleccionusuario">
+                <img src="img/piedra.png" alt="" id="piedra_usuario">
+                <img src="img/papel.jpg" alt="" id="papel_usuario">
+                <img src="img/tijeras.png" alt="" id="tijeras_usuario">
+                <img src="img/lagarto.jpg" alt="" id="lagarto_usuario">
+                <img src="img/spock.png" alt="" id="spock_usuario">
+            </div>
+            <div class="versus" id="vs"><img src="img/vs.jpg" alt=""></div>
+            <div class="eleccionmaquina">
+                <img src="img/piedra.png" alt="" id="piedra_maquina">
+                <img src="img/papel.jpg" alt="" id="papel_maquina">
+                <img src="img/tijeras.png" alt="" id="tijeras_maquina">
+                <img src="img/lagarto.jpg" alt="" id="lagarto_maquina">
+                <img src="img/spock.png" alt="" id="spock_maquina">
+            </div>
+        </div>
+        <!-- 
+            Aqui meto algunos div la idea es ocultarlos con un .none y que a base
+            de que vayan surgiendo las cosas ocultar y mostrar
+        -->
+        <div class="ganar"><h1 id="empezando">Esperando elecciones</h1><h1 id="fight" contenteditable="true">Fight</h1><h1 id="empate">Empate</h1><h1 id="ganar">Has ganado</h1><h1 id="perder">Has perdido</h1></div>
+    </div>
+    <div class="maquina">
+        <h2>maquina:</h2>
+        <div id="maquina1"><img src="img/piedra.png" alt="piedra"></div>
+        <div id="maquina2"><img src="img/papel.jpg" alt="papel"></div>
+        <div id="maquina3"><img src="img/tijeras.png" alt="tijeras"></div>
+        <div id="maquina4"><img src="img/lagarto.jpg" alt="lagarto"></div>
+        <div id="maquina5"><img src="img/spock.png" alt="spock"></div>
+    </div>
+</div>
+<script src="js/codigo.js"></script>
+</body>
+</html>
