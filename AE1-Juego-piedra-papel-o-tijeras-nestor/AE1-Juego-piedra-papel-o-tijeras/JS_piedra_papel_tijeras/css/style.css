@@ -1,0 +1,221 @@
+
+body{
+    background-color: rgb(125, 0, 125);
+}
+button{
+    position: relative;
+    display: 'none';
+    padding: 12px,36px;
+    margin: 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 42px;
+    background: #7d2ae8;
+    cursor: pointer;
+    
+}
+button:hover{
+   animation: animate 0.3s linear;
+    
+}
+@keyframes animate{
+    0%{
+        width: 0px;
+        height:0px;
+    }
+    100%{
+        width: 100px;
+        height: 30px;
+    }
+}
+
+
+h1{
+    color:white;
+}
+h2{
+    color: white;
+}
+.alineado{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.alineado input{
+    height: 14px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.392);
+}
+.usuario{
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+}
+.maquina{
+    justify-content: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 0px;
+}
+.usuario img{
+    width: 100px;
+    padding-top: 30px;
+}
+.maquina img{
+    width: 100px;
+    padding-top: 30px;
+}
+.eleccionusuario{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.versus{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.eleccionmaquina{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.centro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.apuesta{
+    display: flex;
+    
+}
+.versus img{
+    width: 200px;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#piedra_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+#papel_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+#lagarto_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+#spock_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+#tijeras_usuario{
+    width: 200px;
+    border-radius: 200px;
+}
+/* Para la maquina definimos imágenes*/
+#piedra_maquina{
+    width: 200px;
+    border-radius: 200px;
+}
+#papel_maquina{
+    width: 200px;
+    border-radius: 200px;
+    
+}
+#lagarto_maquina{
+    width: 200px;
+    border-radius: 200px;
+    
+}
+#spock_maquina{
+    width: 200px;
+    border-radius: 200px;
+    
+}
+#tijeras_maquina{
+    width: 200px;
+    border-radius: 200px;
+    
+}
+#empezando{
+    color: white;
+    display: none;
+}
+#fight{
+    cursor: pointer;
+    color:#430505;
+    font-size: 32px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+    line-height: 1.2em;
+    outline: none;
+    animation: animateLight 5s linear infinite;
+     
+}
+
+@keyframes animateLight{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+        color: #430505;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+        color: #fff;
+        text-shadow: 0 0 10px #d21010,
+        0 0 20px #d21010,
+        0 0 40px #d21010,
+        0 0 80px #d21010,
+        0 0 160px #d21010;
+    }
+}
+#fight:hover::before{
+    color: black;
+    font-size: 32px;
+    background-color: aqua;
+    display: inline;
+    padding: -5px 0px;
+    margin: 0;
+    position: relative;
+    
+}
+
+
+
+#ganar{
+    color: white;
+    display: none;
+}
+#perder{
+    color: white;
+    display: none;
+}
+#empate{
+    color: white;
+    display: none;
+}
+
+
