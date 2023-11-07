@@ -142,7 +142,7 @@ function empezarJuego() {
 
 		element.style.display = "none";
 	}
-	debugger;
+
 	document.getElementById("empezando").style.display = "block";
 
 	//Hacemos escroll hasta el fin de pagina para que el usuario vea todas las opciones
@@ -223,10 +223,10 @@ function clickimg(element) {
  * @param {*} element Elemento que ejecuta la accion desde el HTML (this)
  */
 function pasarMouseIn(element) {
-		//aumenta la escala a 1.2
-		element.style.transform = "scale(1.15)";
-		//Esto lo que hace es que le mete al css el pointer que es que parezca que sea un boton donde se pueda clicar
-		element.style.cursor = "pointer";
+	//aumenta la escala a 1.2
+	element.style.transform = "scale(1.15)";
+	//Esto lo que hace es que le mete al css el pointer que es que parezca que sea un boton donde se pueda clicar
+	element.style.cursor = "pointer";
 }
 
 /**
@@ -234,8 +234,8 @@ function pasarMouseIn(element) {
  * @param {*} element Elemento que ejecuta la accion desde el HTML (this)
  */
 function pasarMouseOut(element) {
-		//vuelve a la escala a 1
-		element.style.transform = "scale(1)";
+	//vuelve a la escala a 1
+	element.style.transform = "scale(1)";
 }
 
 /**
